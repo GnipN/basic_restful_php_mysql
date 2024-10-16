@@ -18,8 +18,6 @@ switch($request_method) {
             require '../api/login.php';
         } elseif ($request_uri == '/public/index.php/register'){  
             require '../api/register.php';
-        } elseif ($request_uri == '/test') {
-            require '../api/test.php';
         } else {
             echo "404 Not Found - The resource requested could not be found on this server.";
         }
@@ -29,10 +27,10 @@ switch($request_method) {
         echo "404 Not Found - The resource requested could not be found on this server.";
         break;
     case 'DELETE':
-        require '../api/delete.php';
+        // require '../api/delete.php';
+        echo "404 Not Found - The resource requested could not be found on this server.";
         break;
     default:
-        // header("HTTP/1.0 405 Method Not Allowed");
         echo "404 Not Found - The resource requested could not be found on this server.";
         break;
 }
